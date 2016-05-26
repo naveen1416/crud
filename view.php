@@ -19,6 +19,14 @@
 	  margin-left:400px;
 	border-radius:5px;
   }
+   input,button{
+	  margin-top:10px;
+	  border: 1px solid silver;
+	  padding:10px;
+	  border-radius:3px;
+	   margin-top:10px;
+	  margin-left:10px;
+  }
   </style>
 <?php
 //including the database connection file
@@ -57,7 +65,7 @@ $result = mysqli_query($conn,"SELECT * FROM user WHERE id = '".$id."'");
 							?>
 						 
 						</table>
-						<a href="index.php"><button>back</button></a>
+						<a href="index.php"><button style="background-color:green;color:white;">back</button></a>
 					
 			
 </div>

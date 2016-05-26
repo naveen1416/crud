@@ -8,7 +8,8 @@
 <style>
 table, th, td {
     border: 1px solid black;
-	 margin-left:75px;
+	 margin:75px;
+	 white-space:nowrap;
 }
  .card-box{
 	  
@@ -20,9 +21,15 @@ table, th, td {
 	border-radius:5px;
   }
   button{
-	  margin-top:10px;
-	  margin-left:10px;
+	  margin-top:5px;
+	  margin-left:5px;
 	 
+  }
+   input,.button-l{
+	  margin-top:10px;
+	  border: 1px solid silver;
+	  padding:10px;
+	  border-radius:3px;
   }
 </style>
 <?php
@@ -32,7 +39,7 @@ $result = mysqli_query($conn ,"SELECT * FROM user");
 ?>
 <div class="card-box">
 
-<a href="add.php"><button type="submit">Add</button></a>
+<a href="add.php"><button type="submit" class="button-l" style="background-color:green;color:white;">Add</button></a>
 					<table>
 						<thead>
 						  <tr class="info">
@@ -56,8 +63,9 @@ $result = mysqli_query($conn ,"SELECT * FROM user");
 									echo "<td>".$res['email']."</td>";
 									echo "<td>".$res['phone']."</td>";
 									
-									echo "<td><a href='delete.php?id=".$res['id']."' onclick='myFunction()';return false;>Delete</a>||
-									<a href='edit.php?id=".$res['id']."' onclick='myFunction()';return false;>edit</i></a>||<a href='view.php?id=".$res['id']."'>view</i></a>
+									echo "<td><a href='delete.php?id=".$res['id']."' onclick='myFunction()';return false;><button style='background-color:red;color:white;'>delete</button></a>
+									<a href='edit.php?id=".$res['id']."' onclick='myFunction()';return false;><button style='background-color:orange;color:white;'>edit</button></i></a><a href='view.php?id=".$res['id']."'>
+									<button style='background-color:blue;color:white;'>view</button></i></a>
 									
 									</td>";
 									echo "</tr>";	
