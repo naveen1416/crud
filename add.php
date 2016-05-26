@@ -12,7 +12,7 @@
 	  background-color:#f2f2f2;
 	  width:400px;
 	  height:300px;
-	  margin-left:400px;
+	  margin:auto;
 	border-radius:5px;
   }
   input,button{
