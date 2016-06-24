@@ -2,7 +2,7 @@
 //including the database connection file
 include_once("config.php");
 
-if(isset($_POST['Submit'])) {	
+if(isset($_POST['submit'])) {	
 	$name = $_POST['name'];
 	$email= $_POST['email'];
 	$phone= $_POST['phone'];
